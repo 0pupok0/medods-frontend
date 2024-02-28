@@ -1,28 +1,45 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<div class="page">
+  <the-header></the-header>
+  <user-create-form class="content"></user-create-form>
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TheHeader from './components/TheHeader.vue'
+import UserCreateForm from "@/components/UserCreateForm.vue";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    UserCreateForm,
+    TheHeader
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+@font-face {
+  font-family: 'Rateway';
+  src: url('@/assets/Raleway-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.page{
+  font-family: Rateway,serif;
+  background-image: url("assets/background.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  background-color: #2e2e39;
+  padding-bottom: 5vw;
+  margin-top: 3vw;
+}
+
+.content{
+  margin-top: 10vw;
+  padding-top: 5vw;
+  border-radius: 30px;
 }
 </style>
