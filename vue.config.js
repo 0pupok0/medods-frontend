@@ -1,3 +1,3 @@
 module.exports = {
-    publicPath: '/medods-frontend/'
+    publicPath: '/medods-frontend/dist/'
 }
